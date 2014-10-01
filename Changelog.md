@@ -19,6 +19,13 @@ of these repos and their contributors.
 
 Changelog
 ---------
+v0.51
+* Patch kernel from 3.4.102 to 3.4.104
+* gpu: Update MSM KGSL gpu driver
+* ARM: add support for bit sliced AES using NEON instructions
+* mmc: msm_sdcc: Remove unnecessary delay in interrupt context
+* More... (see commit log)
+
 v0.50
 * Huawei Battery updates from moddingg33k
 * swp_emulate: updates

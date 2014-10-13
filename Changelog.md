@@ -19,6 +19,9 @@ of these repos and their contributors.
 
 Changelog
 ---------
+v0.52
+* Overclock the GPU to 320MHz again
+
 v0.51
 * Patch kernel from 3.4.102 to 3.4.104
 * gpu: Update MSM KGSL gpu driver

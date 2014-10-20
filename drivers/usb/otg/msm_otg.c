@@ -1262,6 +1262,21 @@ static void msm_hsusb_vbus_power(struct msm_otg *motg, bool on)
 	}
 }
 
+
+static void msm_hsusb_vbus_power(struct msm_otg *motg, bool on)
+{
+       if (motg->pdata->vbus_power)
+               motg->pdata->vbus_power(on);
+
+       if (on) {
+               motg->connect_type = CONNECT_TYPE_INTERNAL;
+               queue_work(motg->usb_wq, &motg->notifier_work);
+       } else {
+               motg->connect_type = CONNECT_TYPE_CLEAR;
+               queue_work(motg->usb_wq, &motg->notifier_work);
+       }
+}
+
 static int msm_otg_set_host(struct usb_otg *otg, struct usb_bus *host)
 {
 	struct msm_otg *motg = container_of(otg->phy, struct msm_otg, phy);

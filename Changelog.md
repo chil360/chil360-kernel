@@ -19,6 +19,10 @@ of these repos and their contributors.
 
 Changelog
 ---------
+v0.53
+* Return to stock memory configuration
+* acpuclock-7627.c: disable some frequencies
+
 v0.52
 * Overclock the GPU to 320MHz again
 

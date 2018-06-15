@@ -19,6 +19,10 @@ of these repos and their contributors.
 
 Changelog
 ---------
+v0.5X
+* Patch kernel from 3.4.104 to 3.4.110, one by one
+* acpuclock-7627.c : revert small frequencies
+
 v0.53
 * Return to stock memory configuration
 * acpuclock-7627.c: disable some frequencies

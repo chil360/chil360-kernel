@@ -1281,4 +1281,3 @@ static int __init acpuclk_7627_init(void)
 	return platform_driver_register(&acpuclk_7627_driver);
 }
 postcore_initcall(acpuclk_7627_init);
-

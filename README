@@ -1,4 +1,11 @@
-	Linux kernel release 3.x <http://kernel.org/>
+NOTE: This is modd of chil360-kernel, made at first for SlimKat-9.x with display-legacy.
+Since display-caf based ROMs (KK/LP) cause kernel panic on wifi upload, all this changes are searching for source of problem.
+Kernel upgrade is not problem, because 3.4.104 experimental (display-caf) also cause kernel panic and reboot.
+Diffs between legacy and caf based kernel around net, netfilter, IPv6, pmem...etc, maybe cause panic, so let's tests...
+When kernel or something other is fixed, other branch (caf-based) could be used for other caf-based roms.
+THIS kernel (branch kitkat) is for display-legacy KitKat ROMs only!
+
+Linux kernel release 3.4.1xx <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
 as they tell you what this is all about, explain how to install the

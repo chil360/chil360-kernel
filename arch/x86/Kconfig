@@ -82,7 +82,8 @@ config X86
 	select CLKEVT_I8253
 	select ARCH_HAVE_NMI_SAFE_CMPXCHG
 	select GENERIC_IOMAP
-	select DCACHE_WORD_ACCESS
+	select DCACHE_WORD_ACCESS if !DEBUG_PAGEALLOC
+	select HAVE_ARCH_SECCOMP_FILTER
 
 config INSTRUCTION_DECODER
 	def_bool (KPROBES || PERF_EVENTS)
@@ -130,7 +131,7 @@ config SBUS
 	bool
 
 config NEED_DMA_MAP_STATE
-       def_bool (X86_64 || INTEL_IOMMU || DMA_API_DEBUG)
+       def_bool (X86_64 || INTEL_IOMMU || DMA_API_DEBUG || SWIOTLB)
 
 config NEED_SG_DMA_LENGTH
 	def_bool y
